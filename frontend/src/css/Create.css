@@ -1,0 +1,102 @@
+.newfontForCreate {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* keeps H2 centered */
+  position: relative;
+}
+
+/* Keep arrow on the left without pushing title off-center */
+.back-icon {
+  position: absolute;
+  left: 0;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 100px;
+}
+.main-content-wrapper {
+  width: 100%;
+  /* Pushes content down past the fixed header */
+   /* Adjust this value to match your header's actual height */
+  
+  /* Ensures the container spans the rest of the height */
+  min-height: 100vh; 
+  
+  /* Or if you want it to fill the available space below the header */
+  /* min-height: calc(100vh - 70px); */ 
+
+  /* Layout for the form */
+  display: flex;
+  justify-content: center; /* Center the form horizontally */
+  /* align-items: flex-start; /* Optional: Keep the form at the top */
+}
+
+form {
+  width: 100%; /* Use a percentage for responsiveness */
+  max-width: 100%; /* Limit the width on large screens */
+  /* Add other styling for aesthetics */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  height: auto;
+}
+
+.form-floating {
+  width: 50%; /* control input width */
+  height: auto;
+}
+
+/* --- Custom Aesthetic Input Field Styling --- */
+
+/* 1. Base appearance (The input box) */
+.custom-input-field .form-control {
+  height: 200px;
+  /* Soft, modern corner radius */
+  border-radius: 12px; 
+  /* Reduce border thickness and change color for a softer look */
+  border: 1px solid #ddd; 
+  /* Subtle inner shadow to give depth */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) inset;
+  /* Increase padding for a taller, more comfortable feel */
+  padding: 1rem 0.75rem; 
+  /* Smooth transitions for a clean hover effect */
+  transition: all 0.3s ease;
+}
+
+/* 2. Focus state (The aesthetic highlight) */
+.custom-input-field .form-control:focus {
+  /* Remove default blue/cyan Bootstrap focus shadow */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1); 
+  /* Or use a custom color: */
+  border-color: #007bff; 
+  
+  /* Optional: For a softer look, you can remove the focus border entirely */
+  /* outline: 0; */
+}
+
+/* 3. Floating Label appearance */
+.custom-input-field label {
+  /* Match the font weight and color for a cohesive look */
+  font-weight: 500;
+  color: #6c757d; 
+  /* Add a little horizontal padding so the text doesn't touch the edge when floating */
+  padding-left: 0.75rem;
+}
+
+/* 4. Placeholder/Value text style */
+.custom-input-field .form-control::placeholder {
+    color: #a8a8a8;
+    opacity: 0.6; /* Ensure it's visible but subtle */
+}
+

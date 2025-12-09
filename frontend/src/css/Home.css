@@ -1,0 +1,55 @@
+.blog-item {
+    
+    padding: 20px;
+    padding-top: 8px;
+    margin-bottom: 10px;
+}
+.blog-item img {
+    max-width: 100%;
+    height: auto;
+    min-height: 220px;
+    display: block; /* Ensure image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    padding-bottom: 10px;
+}
+
+.newfont {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    font-style: normal;
+    margin-bottom: 0px;
+}
+.tag-line{
+    text-align: center;
+}
+.blog-title-font {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+#carous{
+    padding-top: 0px;
+    padding-bottom: 0%;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#5c5a51;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+    color:#FFF;
+}

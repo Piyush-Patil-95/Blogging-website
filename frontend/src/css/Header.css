@@ -1,0 +1,104 @@
+/* Header base */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95); /* slightly translucent white */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* internal wrapper to constrain width and center content */
+.header-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 12px 20px;
+}
+
+/* Logo */
+.logo img {
+  height: 46px; /* tweak as needed */
+  width: auto;
+  display: block;
+}
+
+/* Nav container: take available space so links can be centered */
+.nav {
+  /* Set explicit display to flex to use its inner content's width */
+  display: flex;
+  
+  /* This is the key trick: Auto margins push the element to the center
+     of the available space *if* the parent is a flex container and 
+     you have elements on either side. */
+  margin: 0 auto; 
+}
+
+/* Links list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Individual link styling */
+.link {
+  color: #222;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* underline element (starts at center) */
+.link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #bec0c0;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+/* hover state */
+.link:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.link:hover::after {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 10px 14px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+
+.logo-spacer {
+  /* You can match the .logo container's width, or just give it a fixed size 
+     equal to the logo image height/width. If the logo has a fixed width, use it here. */
+  width: 150px; /* Example: matching the logo height/size */
+  height: 46px; /* Example: matching the logo height/size */
+}

@@ -1,0 +1,24 @@
+.blog-title-font-details {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    padding: 10px 200px;
+    text-align: center;
+}
+
+.row img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensure image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    padding-bottom: 10px;
+}
+
+.blog-desc{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 19px;
+}
+#update{
+    margin: 10px;
+}
